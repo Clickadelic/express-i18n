@@ -1,6 +1,14 @@
 {
-	"hello": "Hello",
-	"welcome": "Welcome to our site!",
+	"language": "Language",
+	"german": "German",
+	"english": "English",
+	"index": "Homepage",
+	"about": "About us",
+	"contact": "Contact",
+	"index.text": "Welcome to our site.",
+	"about.text": "Welcome to our about site.",
+	"contact.text": "Yeehaw, contact us on our contact site.",
+	"nav.index": "Homepage",
 	"nav.about": "About us",
 	"nav.contact": "Contact"
 }
