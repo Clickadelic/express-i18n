@@ -60,6 +60,14 @@ app.get("/:lang", (req, res) => {
 	res.render("./pages/index", { lang: res.locals.lang })
 })
 
+app.get("/:lang/about", (req, res) => {
+	res.render("./pages/about", { lang: res.locals.lang })
+})
+
+app.get("/:lang/contact", (req, res) => {
+	res.render("./pages/contact", { lang: res.locals.lang })
+})
+
 app.listen(port, () => {
 	console.log(`Server is running on http://localhost:${port}`)
 })
