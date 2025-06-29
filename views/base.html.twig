@@ -1,0 +1,33 @@
+<html lang="{{ lang }}">
+{% block head %}
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}ExpressJS with i18n{% endblock %}</title>
+</head>
+{% endblock %}
+<body>
+{% block language_navigation %}
+<nav id="language-navigation">
+	<p>{{ t('language') }}: {{ lang }}</p>
+  	<a href="/de{{ pathWithoutLang }}" {% if lang == 'de' %}class="active"{% endif %}>{{ t('german') }}</a> |
+  	<a href="/en{{ pathWithoutLang }}" {% if lang == 'en' %}class="active"{% endif %}>{{ t('english') }}</a>
+</nav>
+{% endblock %}
+{% block content %}
+<div class="container">
+	<h1>{{ t('default_string') }}</h1>
+	<p>{{ t('default_string.text') }}</p>
+</div>
+{% endblock %}
+{% block page_navigation %}
+<nav>
+  <a href="/{{ lang }}/">{{ t('nav.index') }}</a>
+  <a href="/{{ lang }}/about">{{ t('nav.about') }}</a>
+  <a href="/{{ lang }}/contact">{{ t('nav.contact') }}</a>
+</nav>
+{% endblock %}
+
+
+</body>
+</html>

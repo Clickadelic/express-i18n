@@ -1,26 +1,10 @@
-<html lang="{{ lang }}">
-<head>
-	<title>{{ t('about') }}</title>
-</head>
-<body>
+{% extends "base.html.twig" %}
 
-<nav id="language-navigation">
-	<p>{{ t('language') }}: {{ lang }}</p>
-  	<a href="/de{{ pathWithoutLang }}" {% if lang == 'de' %}class="active"{% endif %}>{{ t('german') }}</a> |
-  	<a href="/en{{ pathWithoutLang }}" {% if lang == 'en' %}class="active"{% endif %}>{{ t('english') }}</a>
-</nav>
+{% block title %}{{ t('about') }}{% endblock %}
 
-
+{% block content %}
 <div class="container">
 	<h1>{{ t('about') }}</h1>
 	<p>{{ t('about.text') }}</p>
 </div>
-
-<nav>
-  <a href="/{{ lang }}/">{{ t('nav.index') }}</a>
-  <a href="/{{ lang }}/about">{{ t('nav.about') }}</a>
-  <a href="/{{ lang }}/contact">{{ t('nav.contact') }}</a>
-</nav>
-
-</body>
-</html>
+{% endblock %}
